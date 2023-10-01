@@ -1,0 +1,136 @@
+.event-main-view {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.add-event-btn {
+    margin-bottom: 3%;
+    border-style: none;
+    color: white;
+    background-color: transparent;
+    font-size: 90%;
+}
+
+.back-to-event-btn {
+    margin-bottom: 1%;
+    border-style: none;
+    background-color: transparent;
+    color: white;
+    font-size: 90%;
+}
+
+.back-to-event-btn-txt {
+    color: white;
+    font-size: 90%;
+    text-decoration-line: none;
+}
+
+.btn-text {
+    color: white;
+    text-decoration-line: none;
+}
+
+.add-event-text {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 3%;
+    margin-top: 5%;
+}
+
+/* ---------------------------------- */
+
+.event-responsavel-dropdown {
+    height: 8%;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 23%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border: 3px;
+    border-style: double;
+    border-color:  rgb(255, 136, 255);
+    background-color: white;
+    border-radius: 13px;
+}
+
+.event-dropdown-text {
+    font-size: 80%;
+    color: purple;
+}
+
+.event-responsavel-selecionado {
+    color: white;
+    font-size: 70%;
+}
+
+.event-responsavel-dropdown:hover {
+    background-color: rgba(252, 252, 252, 0.445);
+}
+
+
+.event-responsaveis-overflow {
+    height: 50%;
+    width: 23%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-bottom: 1.5%;
+}
+
+.event-dropdown-invisible {
+    overflow-y: hidden;
+}
+
+.event-inputs {
+    height: 20%;
+    width: 30%;
+    margin-bottom: 4%;
+}
+
+/* //////////////////////////////////// */
+
+.event-status-dropdown {
+    height: 14%;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 14%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border: 3px;
+    border-style: double;
+    border-color:  rgb(255, 136, 255);
+    background-color: white;
+    border-radius: 13px;
+}
+
+.event-status-dropdown:hover {
+    background-color: rgba(252, 252, 252, 0.445);
+}
+
+.event-status-dropdown-text {
+    font-size: 80%;
+    color: purple;
+}
+
+.event-status-overflow {
+    height: 22%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-bottom: 3%;
+}
+
+.event-status-dropdown-invisible {
+    overflow-y: hidden;
+}

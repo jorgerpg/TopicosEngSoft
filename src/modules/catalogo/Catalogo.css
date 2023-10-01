@@ -1,0 +1,25 @@
+.catalogo {
+    background-color: white;
+    border-radius: 8px;
+    height: 90%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.catalogo-extras {
+    display: flex;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column; 
+    height: 70%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.info-dev-icon {
+    color: #721764;
+    margin-left: 12px;
+}

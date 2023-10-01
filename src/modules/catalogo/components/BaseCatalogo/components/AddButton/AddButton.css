@@ -1,0 +1,13 @@
+.add-data-btn {
+    background-color: white;
+    color: #721764;
+    border: 0cm;
+    text-decoration-line: none;
+    margin-left: 40%;
+    font-size: 170%;
+    z-index: 1;
+}
+
+.add-decor {
+    text-decoration-line: none;
+}

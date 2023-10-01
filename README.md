@@ -53,7 +53,7 @@ Docente:
 2. Digite `npm start`
 3. Será aberta uma aba conectada ao `localhost:3000`.
 4. Não é necessário fazer login. Clique em `Entrar`.
-5. Telas conectadas ao banco de dados e funcionando: `Membros RAS`, `Eventos` e `Reuniões`.
+5. Telas conectadas ao banco de dados e funcionando: `Membros`, `Eventos` e `Reuniões`.
 
 
 ---
@@ -62,7 +62,7 @@ Docente:
 
 - Front-End: ReactJS - NPM.
 - Back-End: ExpressJS - conexão direta com MySQL via `mysql2`
-- Banco de Dados: MySQL - RAS Manager
+- Banco de Dados: MySQL - Team_Manager
 
 `ReactJS`: Framework Front-End<br/>
 `ExpressJS`: Framework Back-End Node responsável por fornecer recursos mínimos para implementação de servidor web.<br/>

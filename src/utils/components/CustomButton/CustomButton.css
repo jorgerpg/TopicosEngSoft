@@ -1,0 +1,15 @@
+.custom-btn {
+	background-color: #2e6930;
+	color: white;
+	font-weight: 600;
+	border: 0ch;
+	height: 9%;
+	width: 20%;
+	text-align: center;
+}
+
+.custom-btn-text {
+	color: white;
+	font-size: 90%;
+	text-decoration-line: none;
+}

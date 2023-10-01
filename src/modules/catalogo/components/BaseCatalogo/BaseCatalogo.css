@@ -1,0 +1,42 @@
+.catalogo {
+    background-color: white;
+    border-radius: 8px;
+    height: 80%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.catalogo-sub-title {
+    color: #721764;
+    font-size: 100%;
+}
+
+.title-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: flex-start;
+    align-self: flex-start;
+    width: 100%;
+    height: 10%;
+}
+
+.sep-line {
+    width: 100%;
+    height: 0.1%;
+    background-color: rgb(184, 184, 184);
+    z-index: 1;
+}
+
+.cards-view {
+    height: 70%;
+    max-height: 100%;
+    min-height: 70%;
+    width: 100%;
+    padding: 1.8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    overflow-y: scroll;
+}

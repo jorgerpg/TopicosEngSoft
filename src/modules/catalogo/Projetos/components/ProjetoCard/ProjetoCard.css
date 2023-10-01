@@ -1,0 +1,29 @@
+.project-card {
+    background-color: rgb(245, 245, 245);
+    border-radius: 8px;
+    max-height: 100%;
+    height: 70px;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1%;
+}
+
+.project-description {
+    font-size: 88%;
+    font-weight: 800;
+    color: #57074A;
+    text-decoration-line: none;
+}
+
+.project-resp {
+    font-size: 75%;
+    font-weight: 600;
+    color: #57074A;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+

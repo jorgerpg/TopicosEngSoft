@@ -1,0 +1,49 @@
+.projeto-view-card {
+    background-color: white;
+    height: 60%;
+    width: 40%;
+    border-radius: 5%;
+}
+
+.projeto-card-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 12px;
+    z-index: 2;
+}
+
+.projeto-view-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.projeto-card-close {
+    margin-top: 8px;
+    margin-left: 8px;
+    text-decoration-line: none;
+}
+
+.selected-projeto-descricao {
+    font-size: 130%;
+    font-weight: 500;
+    color: #721764;
+    margin-top: 10px;
+}
+
+.selected-projeto-responsavel {
+    font-size: 100%;
+    font-weight: 200;
+    color: #721764;
+    margin-bottom: 4%;
+}
+
+.deletar-projeto-btn {
+    background-color: red;
+    color: white;
+    margin-top: 30%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-style: none;
+}

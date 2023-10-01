@@ -1,0 +1,30 @@
+.cat-card {
+    border-radius: 8px;
+    border-color: #721764;
+    border-width: 2px;
+    color: #721764;
+    border-style: dashed;
+    margin: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    height: 20%;
+    width: 60%;
+    padding-top: 4%;
+}
+
+.card-icon {
+    color: #721764;
+    height: 40%;
+    width: 40%;
+    margin-bottom: 3%;
+}
+
+.card-title {
+    color: #721764;
+    font-weight: 700;
+    font-size: 14;
+    text-decoration-line: none;
+}

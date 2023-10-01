@@ -1,0 +1,13 @@
+.white-tile {
+    height: 100%;
+    width: 80%;
+    background-color: white;
+    border-style: double;
+    border-color:  rgb(255, 136, 255);
+    z-index: 2;
+
+}
+
+.white-tile:hover {
+    background-color: rgb(255, 136, 255);
+}

@@ -1,0 +1,22 @@
+.white-container {
+	height: 45%;
+	width: 35%;
+	background-color: white;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.input-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.logo {
+	max-height: 20%;
+	min-height: 20%;
+	width: 50%;
+}

@@ -1,0 +1,29 @@
+.white-container {
+	height: 45%;
+	width: 35%;
+	background-color: white;
+	border-radius: 8px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.input-column {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	width: 40%;
+}
+
+.logo {
+	max-height: 20%;
+	min-height: 20%;
+	width: 50%;
+}
+
+.text-dados-pessoais {
+	color: #2e6930;
+	font-size: 14px;
+	font-weight: bold;
+}

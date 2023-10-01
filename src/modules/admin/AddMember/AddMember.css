@@ -1,0 +1,28 @@
+.add-member-view {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+.add-member-title {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 8%;
+}
+
+.back-to-members {
+    color: white;
+    background-color: transparent;
+    border-style: none;
+    margin-top: 3%;
+}
+
+.next-member-register {
+    color: white;
+    background-color: transparent;
+    border-style: none;
+    margin-top: 3%;
+}

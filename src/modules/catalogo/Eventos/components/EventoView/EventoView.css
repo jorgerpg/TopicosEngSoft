@@ -1,0 +1,59 @@
+.evento-view-card {
+    background-color: white;
+    height: 60%;
+    width: 40%;
+    border-radius: 5%;
+}
+
+.evento-card-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 12px;
+    z-index: 2;
+}
+
+.evento-card-close {
+    margin-top: 8px;
+    margin-left: 8px;
+    text-decoration-line: none;
+}
+
+.event-view-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.selected-event-descricao {
+    font-size: 130%;
+    font-weight: 500;
+    color: #721764;
+    margin-top: 10px;
+}
+
+.selected-event-palestrante {
+    font-size: 100%;
+    font-weight: 200;
+    color: #721764;
+}
+
+.selected-event-ativo {
+    font-size: 90%;
+    font-weight: 200;
+    color: #721764;
+}
+
+.selected-event-in-data-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.deletar-evento-btn {
+    background-color: red;
+    color: white;
+    margin-top: 30%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-style: none;
+}
