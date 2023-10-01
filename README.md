@@ -26,6 +26,7 @@ Docente:
 > Executando o Back-end
 
 *Requisitos*: 
+- Utilizar o nvm com o node versão 16!!!
 - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 - [MySQL](https://dev.mysql.com/downloads/installer/)
 
@@ -50,7 +51,7 @@ Docente:
 - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 1. Abra um OUTRO terminal dentro do projeto (na raiz, **fora** da pasta **server**).
-2. Digite `npm start`
+2. Digite `npm start` (caso não funcione de primeira rodar um `npm install react`)
 3. Será aberta uma aba conectada ao `localhost:3000`.
 4. Não é necessário fazer login. Clique em `Entrar`.
 5. Telas conectadas ao banco de dados e funcionando: `Membros`, `Eventos` e `Reuniões`.
