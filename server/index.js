@@ -104,15 +104,6 @@ app.get("/projeto/:id", (req, res) => {
 
 });
 
-app.get("/skills", (req, res) => {
-    let query = "SELECT * FROM SKILL";
-
-    db.query(query, (error, result) => {
-        res.json(result);
-    });
-
-});
-
 app.get("/cargo-pessoa/:pessoaID", (req, res) => {
     let query = `SELECT NOME_CARGO FROM CARGO c INNER JOIN PESSOA P ON c.PESSOA_ID = p.PESSOA_ID WHERE p.PESSOA_ID = ${req.params.pessoaID}`;
 
@@ -155,35 +146,10 @@ app.get("/responsavel-projeto/:pessoaID", (req, res) => {
     });
 });
 
-app.post("/adiciona-skill-membro/:skid/:membroid", (req, res) => {
-    let query = `INSERT INTO SKILL_PESSOA VALUES (null, ${req.params.skid}, ${req.params.membroid})`;
-    db.query(query, (error, result) => {
-        res.json(result);
-    });
-
-});
-
-app.get("/membro-skill/:pessoaID", (req, res) => {
-    let query = `SELECT TIPO_SKILL, NOME_SKILL FROM SKILL sk INNER JOIN SKILL_PESSOA sp ON sk.SKILL_ID = sp.SKILL_ID WHERE sp.PESSOA_ID = ${req.params.pessoaID}`;
-    db.query(query, (error, result) => {
-        res.json(result);
-    });
-
-});
-
-app.delete("/remover-membro-skill/:skid/:membroid", (req, res) => {
-    let query = `DELETE FROM SKILL_PESSOA WHERE SKILL_ID = ${req.params.skid} and PESSOA_ID = ${req.params.membroid}`;
-
-    db.query(query, (error, result) => {
-        res.json(result);
-    });
-
-});
-
 //#//#//#//#//#//#//#//#//# [ CADASTRO DE USUÁRIO ] //#//#//#//#//#//#//#//#//#
 
 app.post("/cadastrar-membro/:nome/:email/:senha/:cpf/:telefone", (req, res) => {
-    let query = `INSERT INTO PESSOA VALUES (NULL, NULL, '${req.params.nome}', '2022-09-20', '2022-09-20', '${req.params.email}', '${req.params.cpf} ', '${req.params.senha}', '${req.params.telefone}', 'ATIVO');`;
+    let query = `INSERT INTO PESSOA VALUES (NULL, NULL, '${req.params.nome}', '2023-09-20', '${req.params.email}', '${req.params.cpf} ', '${req.params.senha}', '${req.params.telefone}', 'ATIVO');`;
 
     db.query(query, (error, result) => {
         if (error) return res.json({error: error});

@@ -9,7 +9,7 @@ export default function AtualizarCargo() {
 
     const {id} = useParams();
 
-    let cargos = ["TRAINEE", "VOLUNTARIO", "MEMBRO", "ADMIN"];
+    let cargos = ["EFETIVO", "ESTAGIARIO", "TECNICO", "GERENCIA"];
 
     const [cargo, setCargo] = useState("");
 

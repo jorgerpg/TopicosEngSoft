@@ -57,13 +57,7 @@ export default function MembroView() {
                             </div>
 
                             <div className="selected-member-in-project-row">
-                                <div className="selected-member-data-entered-course">
-                                    Ingressou no curso em {sqlToJsDate(value.DT_INGRESSO_CURSO)}
-                                </div>
-                            </div>
-
-                            <div className="selected-member-in-project-row">
-                                <div className="selected-member-data-entered-teamj">
+                                <div className="selected-member-data-entered-team">
                                     Entrou para equipe em {sqlToJsDate(value.DT_INGRESSO_EQUIPE)}
                                 </div>
                             </div>
