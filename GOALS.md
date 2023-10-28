@@ -1,6 +1,26 @@
 ## Metas até a data da apresentação:
 
 > Urgente
+
+- [ ] Atualizar membro (Só adicionar a mudança no status)
+- [ ] Atualizar evento e finalizar telas
+- [ ] Atualizar projeto e finalizar telas
+- [ ] Atualizar reunião e finalizar telas
+
+(^^^Replicar função de atualização de cargo nos respectivos atributos de todas as telas^^^)
+
+- [ ] Autenticação no login
+
+> Próximos passos
+
+- [x] Melhorar e PADRONIZAR aparência de alguns botões
+- [ ] Padronizar e melhorar as cores de cada tela
+- [ ] Corrigir bug grafico da tela login e da home
+- [ ] Achar icones melhores para as tela home
+
+> Funcionalidades concluidas
+
+- [X] Visualização Membros Equipe unico
 - [x] Visualização de evento único
 - [x] Visualização de projeto único
 - [x] Visualização de reunião única
@@ -9,23 +29,6 @@
 - [x] Deletar evento
 - [x] Deletar projeto
 - [x] Deletar reunião
-
-- [x] `ALERT` para usuário não autenticado
-- [x] Ajeitar os `ALERT` para: deletar membro, deletar evento e deletar reunião (tirar do __finally__)
-
-:::: BANCO ::::
-- [x] Atualizar tabela EVENTO_PESSOA ao colocar membro como responsável
-- [x] Atualizar tabela REUNIAO_PESSOA ao colocar membro como responsável
-
-> Não tão urgente
-- [ ] Atualizar membro
-- [ ] Atualizar evento
-- [ ] Atualizar projeto
-- [ ] Atualizar reunião
-
-- [x] Melhorar e PADRONIZAR aparência de alguns botões
-
-> Próximos passos
 
 - [x] Remover membro de um projeto (através da View única do membro) --> {atualiza tabelas: `PESSOA` e `PROJETO_PESSOA`}
 - [x] Remover membro de um evento (através da View única do membro) --> {atualiza tabela: `EVENTO_PESSOA`}
