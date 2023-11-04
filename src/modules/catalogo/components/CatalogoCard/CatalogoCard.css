@@ -1,8 +1,8 @@
 .cat-card {
     border-radius: 8px;
-    border-color: #721764;
+    border-color: #000;
     border-width: 2px;
-    color: #721764;
+    color: #000;
     border-style: dashed;
     margin: 4%;
     display: flex;
@@ -16,14 +16,14 @@
 }
 
 .card-icon {
-    color: #721764;
+    color: #000;
     height: 40%;
     width: 40%;
     margin-bottom: 3%;
 }
 
 .card-title {
-    color: #721764;
+    color: #000;
     font-weight: 700;
     font-size: 14;
     text-decoration-line: none;

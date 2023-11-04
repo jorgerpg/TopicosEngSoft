@@ -16,19 +16,17 @@
     font-size: 88%;
     font-weight: 800;
     text-decoration-line: none;
-    color: #57074A;
+    color: #000;
 }
 
 .member-class {
     font-size: 65%;
     font-weight: 600;
-    color: #57074A;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    color: #000;
 }
 
 .member-email {
     font-size: 60%;
     font-weight: 600;
-    color: #57074A;
+    color: #000;
 }

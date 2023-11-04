@@ -28,20 +28,20 @@
 .selected-event-descricao {
     font-size: 130%;
     font-weight: 500;
-    color: #721764;
+    color: #000;
     margin-top: 10px;
 }
 
 .selected-event-palestrante {
     font-size: 100%;
     font-weight: 200;
-    color: #721764;
+    color: #000;
 }
 
 .selected-event-ativo {
     font-size: 90%;
     font-weight: 200;
-    color: #721764;
+    color: #000;
 }
 
 .selected-event-in-data-row {

@@ -2,23 +2,24 @@
 
 > Urgente
 
-- [ ] Atualizar membro (Só adicionar a mudança no status)
+- [x] Atualizar membro (Só adicionar a mudança no status)
 - [ ] Atualizar evento e finalizar telas
 - [ ] Atualizar projeto e finalizar telas
 - [ ] Atualizar reunião e finalizar telas
 
 (^^^Replicar função de atualização de cargo nos respectivos atributos de todas as telas^^^)
 
-- [ ] Autenticação no login
-
 > Próximos passos
 
 - [x] Melhorar e PADRONIZAR aparência de alguns botões
-- [ ] Padronizar e melhorar as cores de cada tela
 - [ ] Corrigir bug grafico da tela login e da home
-- [ ] Achar icones melhores para as tela home
+- [ ] Achar icone melhor para a tela home
+- [x] Padronizar e melhorar as cores de cada tela
 
 > Funcionalidades concluidas
+
+- [x] Autenticação no login
+- [x] Ao adicionar um mebro gerar cargo para ele
 
 - [X] Visualização Membros Equipe unico
 - [x] Visualização de evento único

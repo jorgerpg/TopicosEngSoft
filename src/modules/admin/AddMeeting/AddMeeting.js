@@ -25,6 +25,7 @@ export default function AddMeeting() {
     function handleChange(e, changeFunction) {
         changeFunction(e.target.value);
     }
+    
 
     useEffect(() => {
         Axios.get("http://localhost:3001/pessoas").then((response) => {
@@ -49,9 +50,9 @@ export default function AddMeeting() {
                     maxLength={30}
                     onChange={(e) => handleChange(e, setLocalizacao)}
                 />
-                <CustomImput
-                    placeholder={"Data / Hora"}
-                    maxLength={30}
+                <input
+                    type="datetime-local"
+                    placeholder="Data / Hora"
                     onChange={(e) => handleChange(e, setDataHora)}
                 />
                 <CustomImput

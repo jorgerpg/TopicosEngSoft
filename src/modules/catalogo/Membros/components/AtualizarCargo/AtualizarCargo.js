@@ -43,7 +43,7 @@ export default function AtualizarCargo() {
                         {/* ----------------------------------------------------------------------- */}
                         {cargo !== "" ? <h3 className="atualizar-cargo-selecionado">Cargo selecionado: {cargo}</h3> : ""}
                         <button className="update-cargo-btn" onClick={() => {
-                            Axios.put(`http://localhost:3001/atualiza-cargo-pessoa/${id}/${cargo}`).then((response) => {
+                            Axios.put(`http://localhost:3001/atualiza-cargo/${id}/${cargo}`).then((response) => {
                                 if (response.data.error) {
                                     alert("ERRO");
                                 } else {

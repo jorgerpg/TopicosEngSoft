@@ -15,13 +15,13 @@
 .member-nome {
     font-size: 88%;
     font-weight: 800;
-    color: #57074A;
+    color: #000;
 }
 
 .member-local {
     font-size: 65%;
     font-weight: 600;
-    color: #57074A;
+    color: #000;
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -29,5 +29,5 @@
 .member-horario {
     font-size: 60%;
     font-weight: 600;
-    color: #57074A;
+    color: #000;
 }

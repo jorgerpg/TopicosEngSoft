@@ -26,3 +26,37 @@
     border-style: none;
     margin-top: 3%;
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown-options {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.dropdown-options li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-options {
+    display: block;
+}

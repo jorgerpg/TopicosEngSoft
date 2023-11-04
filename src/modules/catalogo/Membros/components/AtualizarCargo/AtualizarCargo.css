@@ -34,7 +34,7 @@
     color: white;
     border-style: none;
     width: 30%;
-    background-color: #721764;
+    background-color: #000;
     align-self: center;
     margin-top: 8%;
 }
@@ -56,7 +56,7 @@
 
 .atualizar-cargo-dropdown-text {
     font-size: 80%;
-    color: purple;
+    color: black;
 }
 
 .atualizar-cargo-selecionado {

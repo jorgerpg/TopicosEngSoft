@@ -7,7 +7,7 @@ const db = mysql.createPool({
     host: "127.0.0.1",
     port: 3306,
     user: "root",
-    password: "Jay5774!",
+    password: "jayjayojatinho",
     database: "team_manager"
 });
 
@@ -104,7 +104,7 @@ app.get("/projeto/:id", (req, res) => {
 
 });
 
-app.get("/cargo-pessoa/:pessoaID", (req, res) => {
+app.get("/cargo/:pessoaID", (req, res) => {
     let query = `SELECT NOME_CARGO FROM CARGO c INNER JOIN PESSOA P ON c.PESSOA_ID = p.PESSOA_ID WHERE p.PESSOA_ID = ${req.params.pessoaID}`;
 
     db.query(query, (error, result) => {
@@ -113,7 +113,7 @@ app.get("/cargo-pessoa/:pessoaID", (req, res) => {
 
 });
 
-app.put("/atualiza-cargo-pessoa/:pessoaID/:cargo", (req, res) => {
+app.put("/atualiza-cargo/:pessoaID/:cargo", (req, res) => {
     let query = `UPDATE CARGO SET NOME_CARGO = '${req.params.cargo}' WHERE PESSOA_ID = ${req.params.pessoaID}`;
 
     db.query(query, (error, result) => {
@@ -150,6 +150,17 @@ app.get("/responsavel-projeto/:pessoaID", (req, res) => {
 
 app.post("/cadastrar-membro/:nome/:email/:senha/:cpf/:telefone", (req, res) => {
     let query = `INSERT INTO PESSOA VALUES (NULL, NULL, '${req.params.nome}', '2023-09-20', '${req.params.email}', '${req.params.cpf} ', '${req.params.senha}', '${req.params.telefone}', 'ATIVO');`;
+
+    db.query(query, (error, result) => {
+        if (error) return res.json({error: error});
+        return res.json(result);
+    });
+})
+
+//#//#//#//#//#//#//#//#//# [ CADASTRO DE CARGO ] //#//#//#//#//#//#//#//#//#
+
+app.post("/cadastrar-membro-cargo/:id/:cargo", (req, res) => {
+    let query = `INSERT INTO CARGO VALUES ('${req.params.id}', '${req.params.id}', '${req.params.cargo}');`;
 
     db.query(query, (error, result) => {
         if (error) return res.json({error: error});

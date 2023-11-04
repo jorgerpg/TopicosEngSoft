@@ -28,14 +28,14 @@
 .selected-member-name {
     font-size: 130%;
     font-weight: 500;
-    color: #721764;
+    color: #000;
     margin-top: 10px;
 }
 
 .selected-member-email {
     font-size: 100%;
     font-weight: 200;
-    color: #721764;
+    color: #000;
 }
 
 .selected-member-cargo {
@@ -43,14 +43,14 @@
     font-weight: 200;
     margin-top: 2%;
     margin-bottom: 2%;
-    color: #721764;
+    color: #000;
     display: flex;
     flex-direction: row;
     align-self: center;
 }
 
 .atualiza-cargo-btn {
-    color: #721764;
+    color: #000;
     text-decoration-line: none;
 }
 
@@ -79,7 +79,7 @@
     background-color: transparent;
     border-style: none;
     width: 24%;
-    color: #721764;
+    color: #000;
     margin-top: 3%;
 }
 
@@ -93,7 +93,7 @@
     background-color: transparent;
     border-style: none;
     width: 56%;
-    color: #721764;
+    color: #000;
     margin-top: 3%;
 }
 

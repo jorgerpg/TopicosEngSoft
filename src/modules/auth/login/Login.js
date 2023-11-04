@@ -1,22 +1,13 @@
 import React, { useState } from "react";
-
-import CustomInput  from "./../../../utils/components/CustomInput/CustomInput";
-import Axios from 'axios';
+import CustomInput from "./../../../utils/components/CustomInput/CustomInput";
+import Axios from "axios";
 import logo from "../../../assets/logo.png";
-
-import './Login.css';
+import "./Login.css";
 import CustomButton from "../../../utils/components/CustomButton/CustomButton";
 
 export default function Login() {
-
-    const [pessoas, setPessoas] = useState([]);
-
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
-    function handleClickBtn() {
-        console.log("CLICOU");
-    }
 
     function handleChangeEmail(ev) {
         setEmail(ev.target.value);
@@ -26,67 +17,54 @@ export default function Login() {
         setPassword(ev.target.value);
     }
 
-    let route = "/catalogo";
+    function handleLogin() {
+        if (email === "" || password === "") {
+            alert("Preencha os campos obrigatórios!");
+            return;
+        }
+
+        Axios.get(`http://localhost:3001/auth/${email}`).then((response) => {
+            const pessoas = response.data;
+            if (pessoas.length === 0) {
+                alert("Usuário não encontrado.");
+            } else {
+                const person = pessoas[0];
+                if (person.SENHA === password) {
+                    alert("Login successful!");
+                    window.location.href = "/catalogo";
+                } else {
+                    alert("Senha incorreta!");
+                }
+            }
+        }).catch((error) => {
+            console.error(error);
+            alert("Autenticação falhou. Verifique se seus dados estão corretos.");
+        });
+    }
 
     return (
-            <>
-                <div className="white-container">
-                    <img src={logo} alt="Logo do Manager" className="logo"/>
-                    <div className="input-column">
-                        <CustomInput 
-                        id="login-input-user" 
-                        type="text" 
-                        placeholder="Usuário" 
-                        maxLength={50}
-                        onChange={(e) => handleChangeEmail(e)}
-                        />
-                        <CustomInput 
-                        id="login-input-password" 
-                        type="password" 
-                        placeholder="Senha" 
-                        maxLength={20}
-                        onChange={(e) => handleChangePassword(e)}
-                        />
-                    </div>
-                    <CustomButton 
-                    onClick={()=> {
-                Axios.get(`http://localhost:3001/auth/${email}`).then((response) => {
-                    setPessoas(response.data);
-
-                    if (email === "" || password === "") {
-                        alert("Preencha os campos obrigatórios!");
-                    } else {
-                        if (typeof response === "undefined") {
-                            alert("Preencha os campos obrigatórios!");
-                        }
-                    }
-                    
-                    if (response.data.error) {
-                        alert("ERRO: Autenticação falhou!");
-                    } else {
-                        if (pessoas.length > 0) {
-                            let person = pessoas.at(0);
-                            if (person.SENHA === password) {
-                                window.location.href = "http://localhost:3000/catalogo";
-                            } else {
-                                alert("Senha incorreta!");
-                            }
-                        } else {
-                            alert("ERRO: Autenticação falhou!");
-                        }
-                    }
-
-
-
-                }).catch((_) => {
-                    alert(`Autenticação falhou! Preencha os campos obrigatórios, ou então verifique se seus dados estão corretos.`);
-                });
-        return handleClickBtn;
-                    }}
-                    navTo={route} 
-                    text="ENTRAR"
-                    />
-                </div> 
-            </>
-        );
+        <div className="white-container">
+            <img src={logo} alt="Logo do Manager" className="logo" />
+            <div className="input-column">
+                <CustomInput
+                    id="login-input-user"
+                    type="text"
+                    placeholder="Usuário"
+                    maxLength={50}
+                    onChange={handleChangeEmail}
+                />
+                <CustomInput
+                    id="login-input-password"
+                    type="password"
+                    placeholder="Senha"
+                    maxLength={20}
+                    onChange={handleChangePassword}
+                />
+            </div>
+            <CustomButton
+                onClick={handleLogin}
+                text="ENTRAR"
+            />
+        </div>
+    );
 }

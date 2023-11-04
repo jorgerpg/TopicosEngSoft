@@ -1,4 +1,3 @@
 class AppColors {
-    static purple1 = 0xff721764;
-    static purple2 = 0xff57074A;
+    static black = 0x000000;
 }

@@ -11,7 +11,14 @@ export default function Reunioes() {
 
     useEffect(() => {
         Axios.get("http://localhost:3001/reunioes").then((response) => {
-            setReunioesList(response.data);
+            // Format the date and time using toLocaleString()
+            const formattedReunioes = response.data.map((reuniao) => {
+                return {
+                    ...reuniao,
+                    DT_HORA: new Date(reuniao.DT_HORA).toLocaleString(),
+                };
+            });
+            setReunioesList(formattedReunioes);
         });
     }, []);
 

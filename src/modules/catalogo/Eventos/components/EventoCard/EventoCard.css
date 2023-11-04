@@ -15,14 +15,14 @@
 .event-title {
     font-size: 88%;
     font-weight: 800;
-    color: #57074A;
+    color: #000;
     text-decoration-line: none;
 }
 
 .event-date {
     font-size: 65%;
     font-weight: 600;
-    color: #57074A;
+    color: #000;
     margin-top: 2%;
     margin-bottom: 2%;
     width: 100%;
@@ -32,7 +32,7 @@
     font-size: 60%;
     font-weight: 600;
     width: 100%;
-    color: #57074A;
+    color: #000;
 }
 
 .flex-row {

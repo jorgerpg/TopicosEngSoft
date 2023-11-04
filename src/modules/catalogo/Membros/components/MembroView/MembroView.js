@@ -29,7 +29,7 @@ export default function MembroView() {
     const [cargo, setCargo] = useState("");
 
     useEffect(() => {
-        Axios.get(`http://localhost:3001/cargo-pessoa/${id}`).then((response) => {
+        Axios.get(`http://localhost:3001/cargo/${id}`).then((response) => {
 
             let data = response.data;
 
