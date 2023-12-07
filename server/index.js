@@ -146,6 +146,20 @@ app.get("/responsavel-projeto/:pessoaID", (req, res) => {
     });
 });
 
+app.get("/membros-do-projeto/:idProjeto", (req, res) => {
+    const { idProjeto } = req.params;
+    let query = `
+      SELECT P.NOME
+      FROM PESSOA P
+      INNER JOIN PROJETO_PESSOA PP ON P.PESSOA_ID = PP.PESSOA_ID
+      WHERE PP.PROJETO_ID = ${idProjeto};
+    `;
+
+    db.query(query, (error, result) => {
+        res.json(result);
+    });
+});
+
 //#//#//#//#//#//#//#//#//# [ CADASTRO DE USUÁRIO ] //#//#//#//#//#//#//#//#//#
 
 app.post("/cadastrar-membro/:nome/:email/:senha/:cpf/:telefone", (req, res) => {
