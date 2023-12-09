@@ -3,6 +3,7 @@ const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
 
+// Configuração do pool de conexão com o banco de dados MySQL
 const db = mysql.createPool({
     host: "127.0.0.1",
     port: 3306,
@@ -14,25 +15,25 @@ const db = mysql.createPool({
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+// Middlewares
+app.use(cors()); // Middleware para lidar com política de mesma origem
+app.use(express.json()); // Middleware para analisar corpos de solicitações no formato JSON
 
+// Rotas GET para recuperar informações do banco de dados
 app.get("/pessoas", (req, res) => {
     let query = "SELECT * FROM PESSOA";
-
     db.query(query, (error, result) => {
         res.json(result);
     });
-
 });
 
 app.get("/pessoa/:id", (req, res) => {
     let query = `SELECT * FROM PESSOA WHERE PESSOA_ID = ${req.params.id}`;
-    
     db.query(query, (error, result) => {
         res.json(result);
     });
 });
+
 
 app.get("/pessoa-last-registered", (req, res) => {
     let query = "SELECT * FROM PESSOA ORDER BY PESSOA_ID DESC LIMIT 1";
@@ -113,15 +114,6 @@ app.get("/cargo/:pessoaID", (req, res) => {
 
 });
 
-app.put("/atualiza-cargo/:pessoaID/:cargo", (req, res) => {
-    let query = `UPDATE CARGO SET NOME_CARGO = '${req.params.cargo}' WHERE PESSOA_ID = ${req.params.pessoaID}`;
-
-    db.query(query, (error, result) => {
-        res.json(result);
-    });
-
-});
-
 app.get("/responsavel-reuniao/:pessoaID", (req, res) => {
     let query = `SELECT NOME FROM PESSOA P INNER JOIN REUNIAO R ON P.PESSOA_ID = R.RESPONSAVEL_ID WHERE p.PESSOA_ID = ${req.params.pessoaID}`;
 
@@ -159,6 +151,23 @@ app.get("/membros-do-projeto/:idProjeto", (req, res) => {
         res.json(result);
     });
 });
+
+// Rota PUT para atualizar informações no banco de dados
+app.put("/atualiza-cargo/:pessoaID/:cargo", (req, res) => {
+    let query = `UPDATE CARGO SET NOME_CARGO = '${req.params.cargo}' WHERE PESSOA_ID = ${req.params.pessoaID}`;
+    db.query(query, (error, result) => {
+        res.json(result);
+    });
+});
+
+app.put("/atualiza-projeto-pessoa/:pessoaID/:projetoid/:pessoaid", (req, res) => {
+    let query = `UPDATE PESSOA SET PROJETO_ID = '${req.params.projetoid}' WHERE PESSOA_ID = ${req.params.pessoaid}`;
+    db.query(query, (error, result) => {
+        res.json(result);
+    });
+});
+
+// Rotas POST para inserir novos registros no banco de dados
 
 //#//#//#//#//#//#//#//#//# [ CADASTRO DE USUÁRIO ] //#//#//#//#//#//#//#//#//#
 
@@ -215,7 +224,19 @@ app.post("/adicionar-projeto/:descricao/:responsavelID/:status", (req, res) => {
     });
 })
 
+//#//#//#//#//#//#//#//#//# [ CADASTRAR PESSOA A PROJETO ] //#//#//#//#//#//#//#//#//#
+
+app.post("/adicionar-projeto-pessoa/:projetoID/:responsavelID/", (req, res) => {
+    let query = `INSERT INTO PROJETO_PESSOA VALUES (null, ${req.params.projetoID} , '${req.params.responsavelID}')`;
+    db.query(query, (error, result) => {
+        if (error) return res.json({error: error});
+        return res.json(result);
+    });
+})
+
 //#//#//#//#//#//#//#//#//#//#//#//#//#//#//#//#//#//#//#//#//#//#//#//#//#//#
+
+// Rotas DELETE para excluir registros do banco de dados
 
 //#//#//#//#//#//#//#//#//# [ DELETAR MEMBRO ] //#//#//#//#//#//#//#//#//#
 
@@ -272,8 +293,8 @@ app.delete("/deletar-membro-projeto/:pessoaID/:projetoID", (req, res) => {
     });
 })
 
+// Iniciar o Servidor
 const _serverPort = 3001;
-
 app.listen(_serverPort, () => {
     console.log(`RUNNING SERVER AT PORT: ${_serverPort}`);
 })

@@ -64,7 +64,7 @@ export default function MembroView() {
                             {value.PROJETO_ID !== null ? 
                             <button className="go-project-btn" onClick={(_) => {
                                 window.location.href = `http://localhost:3000/projeto/${value.PROJETO_ID}`;
-                            }}>🠺 Ir para projeto</button> 
+                            }}>🠺 Projeto responsavel</button> 
                             : null}
                             <button className="deletar-membro-btn"
                                 onClick={(_) => {
