@@ -9,14 +9,12 @@
 
 (^^^Replicar função de atualização de cargo nos respectivos atributos de todas as telas^^^)
 
-> Próximos passos
+> Funcionalidades concluidas
 
 - [x] Melhorar e PADRONIZAR aparência de alguns botões
-- [ ] Corrigir bug grafico da tela login e da home
-- [ ] Achar icone melhor para a tela home
+- [x] Corrigir bug grafico da tela login e da home
+- [x] Achar icone melhor para a tela home
 - [x] Padronizar e melhorar as cores de cada tela
-
-> Funcionalidades concluidas
 
 - [x] Autenticação no login
 - [x] Ao adicionar um mebro gerar cargo para ele
