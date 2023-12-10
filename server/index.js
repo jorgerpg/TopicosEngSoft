@@ -19,7 +19,8 @@ const app = express();
 app.use(cors()); // Middleware para lidar com política de mesma origem
 app.use(express.json()); // Middleware para analisar corpos de solicitações no formato JSON
 
-// Rotas GET para recuperar informações do banco de dados
+//#//#//#//#//#//#//#//#//# Rotas GET para recuperar informações do banco de dados //#//#//#//#//#//#//#//#//#
+
 app.get("/pessoas", (req, res) => {
     let query = "SELECT * FROM PESSOA";
     db.query(query, (error, result) => {
@@ -152,7 +153,7 @@ app.get("/membros-do-projeto/:idProjeto", (req, res) => {
     });
 });
 
-// Rota PUT para atualizar informações no banco de dados
+//#//#//#//#//#//#//#//#//# Rota PUT para atualizar informações no banco de dados //#//#//#//#//#//#//#//#//#
 app.put("/atualiza-cargo/:pessoaID/:cargo", (req, res) => {
     let query = `UPDATE CARGO SET NOME_CARGO = '${req.params.cargo}' WHERE PESSOA_ID = ${req.params.pessoaID}`;
     db.query(query, (error, result) => {

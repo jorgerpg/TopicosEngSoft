@@ -1,6 +1,6 @@
 ## Metas até a data da apresentação:
 
-> Urgente
+> Em processo
 
 - [x] Atualizar membro (Só adicionar a mudança no status)
 - [ ] Atualizar evento e finalizar telas
